@@ -1,0 +1,4 @@
+com/example/moviebooking/service/PricingServiceTest.class
+com/example/moviebooking/service/BookingLifecycleIntegrationTest.class
+com/example/moviebooking/service/BookingServiceConcurrencyTest.class
+com/example/moviebooking/service/CancellationServiceTest.class

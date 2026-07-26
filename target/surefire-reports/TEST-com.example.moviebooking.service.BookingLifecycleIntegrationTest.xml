@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.moviebooking.service.BookingLifecycleIntegrationTest" time="2.876" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/jayashbatra/Downloads/movie-booking/target/test-classes:/Users/jayashbatra/Downloads/movie-booking/target/classes:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.2/spring-boot-starter-web-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.2/spring-boot-starter-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot/3.3.2/spring-boot-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.2/spring-boot-autoconfigure-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.2/spring-boot-starter-logging-3.3.2.jar:/Users/jayashbatra/.m2/repository/ch/qos/logback/logback-classic/1.5.6/logback-classic-1.5.6.jar:/Users/jayashbatra/.m2/repository/ch/qos/logback/logback-core/1.5.6/logback-core-1.5.6.jar:/Users/jayashbatra/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/Users/jayashbatra/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/Users/jayashbatra/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/jayashbatra/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/jayashbatra/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.2/spring-boot-starter-json-3.3.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.2/spring-boot-starter-tomcat-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.26/tomcat-embed-core-10.1.26.jar:/Users/jayashbatra/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.26/tomcat-embed-websocket-10.1.26.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-web/6.1.11/spring-web-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-beans/6.1.11/spring-beans-6.1.11.jar:/Users/jayashbatra/.m2/repository/io/micrometer/micrometer-observation/1.13.2/micrometer-observation-1.13.2.jar:/Users/jayashbatra/.m2/repository/io/micrometer/micrometer-commons/1.13.2/micrometer-commons-1.13.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-webmvc/6.1.11/spring-webmvc-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-context/6.1.11/spring-context-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-expression/6.1.11/spring-expression-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.3.2/spring-boot-starter-data-jpa-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.3.2/spring-boot-starter-aop-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.3.2/spring-boot-starter-jdbc-3.3.2.jar:/Users/jayashbatra/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-jdbc/6.1.11/spring-jdbc-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/hibernate/orm/hibernate-core/6.5.2.Final/hibernate-core-6.5.2.Final.jar:/Users/jayashbatra/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/jayashbatra/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/jayashbatra/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/jayashbatra/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/jayashbatra/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/jayashbatra/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/jayashbatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/jayashbatra/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/jayashbatra/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/jayashbatra/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/jayashbatra/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/jayashbatra/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/jayashbatra/.m2/repository/org/springframework/data/spring-data-jpa/3.3.2/spring-data-jpa-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/data/spring-data-commons/3.3.2/spring-data-commons-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-orm/6.1.11/spring-orm-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-tx/6.1.11/spring-tx-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-aspects/6.1.11/spring-aspects-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.3.2/spring-boot-starter-validation-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.26/tomcat-embed-el-10.1.26.jar:/Users/jayashbatra/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/jayashbatra/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.3.2/spring-boot-starter-security-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-aop/6.1.11/spring-aop-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-config/6.3.1/spring-security-config-6.3.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-web/6.3.1/spring-security-web-6.3.1.jar:/Users/jayashbatra/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/jayashbatra/.m2/repository/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar:/Users/jayashbatra/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/jayashbatra/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.2/spring-boot-starter-test-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-test/3.3.2/spring-boot-test-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.2/spring-boot-test-autoconfigure-3.3.2.jar:/Users/jayashbatra/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/jayashbatra/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/jayashbatra/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/jayashbatra/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/jayashbatra/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/jayashbatra/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/jayashbatra/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/jayashbatra/.m2/repository/org/awaitility/awaitility/4.2.1/awaitility-4.2.1.jar:/Users/jayashbatra/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/jayashbatra/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/Users/jayashbatra/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/Users/jayashbatra/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/jayashbatra/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/Users/jayashbatra/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/jayashbatra/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/Users/jayashbatra/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/Users/jayashbatra/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/Users/jayashbatra/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/Users/jayashbatra/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.18/byte-buddy-agent-1.14.18.jar:/Users/jayashbatra/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/jayashbatra/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/Users/jayashbatra/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/jayashbatra/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-core/6.1.11/spring-core-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-jcl/6.1.11/spring-jcl-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-test/6.1.11/spring-test-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-test/6.3.1/spring-security-test-6.3.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-core/6.3.1/spring-security-core-6.3.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-crypto/6.3.1/spring-security-crypto-6.3.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-mail/3.3.2/spring-boot-starter-mail-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-context-support/6.1.11/spring-context-support-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.3/jakarta.mail-2.0.3.jar:/Users/jayashbatra/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="/Users/jayashbatra/Library/Java/JavaVirtualMachines/openjdk-20/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/jayashbatra/Downloads/movie-booking/target/surefire/surefirebooter-20260727010218477_3.jar /Users/jayashbatra/Downloads/movie-booking/target/surefire 2026-07-27T01-02-18_428-jvmRun1 surefire-20260727010218477_1tmp surefire_0-20260727010218477_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/jayashbatra/Downloads/movie-booking/target/test-classes:/Users/jayashbatra/Downloads/movie-booking/target/classes:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.2/spring-boot-starter-web-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.2/spring-boot-starter-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot/3.3.2/spring-boot-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.2/spring-boot-autoconfigure-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.2/spring-boot-starter-logging-3.3.2.jar:/Users/jayashbatra/.m2/repository/ch/qos/logback/logback-classic/1.5.6/logback-classic-1.5.6.jar:/Users/jayashbatra/.m2/repository/ch/qos/logback/logback-core/1.5.6/logback-core-1.5.6.jar:/Users/jayashbatra/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/Users/jayashbatra/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/Users/jayashbatra/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/jayashbatra/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/jayashbatra/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.2/spring-boot-starter-json-3.3.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.2/spring-boot-starter-tomcat-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.26/tomcat-embed-core-10.1.26.jar:/Users/jayashbatra/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.26/tomcat-embed-websocket-10.1.26.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-web/6.1.11/spring-web-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-beans/6.1.11/spring-beans-6.1.11.jar:/Users/jayashbatra/.m2/repository/io/micrometer/micrometer-observation/1.13.2/micrometer-observation-1.13.2.jar:/Users/jayashbatra/.m2/repository/io/micrometer/micrometer-commons/1.13.2/micrometer-commons-1.13.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-webmvc/6.1.11/spring-webmvc-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-context/6.1.11/spring-context-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-expression/6.1.11/spring-expression-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.3.2/spring-boot-starter-data-jpa-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.3.2/spring-boot-starter-aop-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.3.2/spring-boot-starter-jdbc-3.3.2.jar:/Users/jayashbatra/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-jdbc/6.1.11/spring-jdbc-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/hibernate/orm/hibernate-core/6.5.2.Final/hibernate-core-6.5.2.Final.jar:/Users/jayashbatra/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/jayashbatra/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/jayashbatra/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/jayashbatra/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/jayashbatra/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/jayashbatra/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/jayashbatra/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/jayashbatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/jayashbatra/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/jayashbatra/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/jayashbatra/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/jayashbatra/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/jayashbatra/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/jayashbatra/.m2/repository/org/springframework/data/spring-data-jpa/3.3.2/spring-data-jpa-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/data/spring-data-commons/3.3.2/spring-data-commons-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-orm/6.1.11/spring-orm-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-tx/6.1.11/spring-tx-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-aspects/6.1.11/spring-aspects-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.3.2/spring-boot-starter-validation-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.26/tomcat-embed-el-10.1.26.jar:/Users/jayashbatra/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/jayashbatra/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.3.2/spring-boot-starter-security-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-aop/6.1.11/spring-aop-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-config/6.3.1/spring-security-config-6.3.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-web/6.3.1/spring-security-web-6.3.1.jar:/Users/jayashbatra/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/jayashbatra/.m2/repository/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar:/Users/jayashbatra/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/jayashbatra/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.2/spring-boot-starter-test-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-test/3.3.2/spring-boot-test-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.2/spring-boot-test-autoconfigure-3.3.2.jar:/Users/jayashbatra/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/jayashbatra/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/jayashbatra/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/jayashbatra/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/jayashbatra/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/jayashbatra/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/jayashbatra/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/jayashbatra/.m2/repository/org/awaitility/awaitility/4.2.1/awaitility-4.2.1.jar:/Users/jayashbatra/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/jayashbatra/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/Users/jayashbatra/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/Users/jayashbatra/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/jayashbatra/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/Users/jayashbatra/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/jayashbatra/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/Users/jayashbatra/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/Users/jayashbatra/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/Users/jayashbatra/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/Users/jayashbatra/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.18/byte-buddy-agent-1.14.18.jar:/Users/jayashbatra/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/jayashbatra/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/Users/jayashbatra/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/jayashbatra/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-core/6.1.11/spring-core-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-jcl/6.1.11/spring-jcl-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-test/6.1.11/spring-test-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-test/6.3.1/spring-security-test-6.3.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-core/6.3.1/spring-security-core-6.3.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/security/spring-security-crypto/6.3.1/spring-security-crypto-6.3.1.jar:/Users/jayashbatra/.m2/repository/org/springframework/boot/spring-boot-starter-mail/3.3.2/spring-boot-starter-mail-3.3.2.jar:/Users/jayashbatra/.m2/repository/org/springframework/spring-context-support/6.1.11/spring-context-support-6.1.11.jar:/Users/jayashbatra/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.3/jakarta.mail-2.0.3.jar:/Users/jayashbatra/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/jayashbatra"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-03-21"/>
+    <property name="java.home" value="/Users/jayashbatra/Library/Java/JavaVirtualMachines/openjdk-20/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/jayashbatra/Downloads/movie-booking"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/jayashbatra/Downloads/movie-booking/target/surefire/surefirebooter-20260727010218477_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="20+36-2344"/>
+    <property name="user.name" value="jayashbatra"/>
+    <property name="stdout.encoding" value="US-ASCII"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="14.4"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/jayashbatra/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/r1/956hn5f910726ldnd2wwh24w0000gp/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="20"/>
+    <property name="user.dir" value="/Users/jayashbatra/Downloads/movie-booking"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="29961"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="US-ASCII"/>
+    <property name="java.library.path" value="/Users/jayashbatra/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="US-ASCII"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="20+36-2344"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="64.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[movie-booking] "/>
+  </properties>
+  <testcase name="cancelPath_confirmedBooking_releasesSeatAndRefunds" classname="com.example.moviebooking.service.BookingLifecycleIntegrationTest" time="0.053">
+    <system-out><![CDATA[01:02:19.739 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.moviebooking.service.BookingLifecycleIntegrationTest]: BookingLifecycleIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:02:19.797 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.moviebooking.MovieBookingApplication for test class com.example.moviebooking.service.BookingLifecycleIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-07-27T01:02:19.981+05:30  INFO 29961 --- [movie-booking] [           main] c.e.m.s.BookingLifecycleIntegrationTest  : Starting BookingLifecycleIntegrationTest using Java 20 with PID 29961 (started by jayashbatra in /Users/jayashbatra/Downloads/movie-booking)
+2026-07-27T01:02:19.982+05:30  INFO 29961 --- [movie-booking] [           main] c.e.m.s.BookingLifecycleIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2026-07-27T01:02:20.336+05:30  INFO 29961 --- [movie-booking] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-27T01:02:20.374+05:30  INFO 29961 --- [movie-booking] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 12 JPA repository interfaces.
+2026-07-27T01:02:20.638+05:30  INFO 29961 --- [movie-booking] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-27T01:02:20.670+05:30  INFO 29961 --- [movie-booking] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-07-27T01:02:20.688+05:30  INFO 29961 --- [movie-booking] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-27T01:02:20.753+05:30  INFO 29961 --- [movie-booking] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-27T01:02:20.767+05:30  INFO 29961 --- [movie-booking] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-27T01:02:20.866+05:30  INFO 29961 --- [movie-booking] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:moviebooking user=SA
+2026-07-27T01:02:20.867+05:30  INFO 29961 --- [movie-booking] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-27T01:02:21.384+05:30  INFO 29961 --- [movie-booking] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table app_user (
+        id bigint generated by default as identity,
+        email varchar(255) not null,
+        name varchar(255),
+        password_hash varchar(255) not null,
+        role enum ('ADMIN','CUSTOMER') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table booking (
+        id bigint generated by default as identity,
+        created_at timestamp(6) not null,
+        hold_expires_at timestamp(6),
+        status enum ('CANCELLED','CONFIRMED','EXPIRED','PENDING_PAYMENT') not null,
+        total_amount numeric(38,2),
+        discount_code_id bigint,
+        show_id bigint not null,
+        user_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table city (
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        state varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table discount_code (
+        id bigint generated by default as identity,
+        active boolean,
+        code varchar(255) not null,
+        flat_amount_off numeric(38,2),
+        max_redemptions integer,
+        percentage_off numeric(38,2),
+        times_redeemed integer,
+        valid_from timestamp(6),
+        valid_until timestamp(6),
+        primary key (id)
+    )
+Hibernate: 
+    create table movie (
+        id bigint generated by default as identity,
+        duration_minutes integer,
+        genre varchar(255),
+        language varchar(255),
+        title varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table payment (
+        id bigint generated by default as identity,
+        amount numeric(38,2),
+        created_at timestamp(6),
+        provider_reference varchar(255),
+        refunded_amount numeric(38,2),
+        status enum ('FAILED','PARTIALLY_REFUNDED','REFUNDED','SUCCESS'),
+        booking_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table refund_policy (
+        id bigint generated by default as identity,
+        active boolean,
+        min_hours_before_show integer not null,
+        name varchar(255) not null,
+        refund_percentage numeric(38,2) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table screen (
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        theater_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table seat (
+        id bigint generated by default as identity,
+        row_label varchar(255) not null,
+        seat_number integer not null,
+        tier enum ('PREMIUM','REGULAR') not null,
+        screen_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table show (
+        id bigint generated by default as identity,
+        base_price numeric(38,2) not null,
+        end_time timestamp(6) not null,
+        start_time timestamp(6) not null,
+        movie_id bigint not null,
+        screen_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table show_seat (
+        id bigint generated by default as identity,
+        hold_expires_at timestamp(6),
+        status enum ('AVAILABLE','BOOKED','HELD') not null,
+        version bigint,
+        booking_id bigint,
+        seat_id bigint not null,
+        show_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table theater (
+        id bigint generated by default as identity,
+        address varchar(255) not null,
+        name varchar(255) not null,
+        city_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists app_user 
+       drop constraint if exists UK1j9d9a06i600gd43uu3km82jw
+Hibernate: 
+    alter table if exists app_user 
+       add constraint UK1j9d9a06i600gd43uu3km82jw unique (email)
+Hibernate: 
+    alter table if exists discount_code 
+       drop constraint if exists UKpgevf2g3j2jbto0crethuhpyt
+Hibernate: 
+    alter table if exists discount_code 
+       add constraint UKpgevf2g3j2jbto0crethuhpyt unique (code)
+Hibernate: 
+    alter table if exists payment 
+       drop constraint if exists UKku02qy6369hn9uhy3n7jk9v6e
+Hibernate: 
+    alter table if exists payment 
+       add constraint UKku02qy6369hn9uhy3n7jk9v6e unique (booking_id)
+Hibernate: 
+    alter table if exists seat 
+       drop constraint if exists UK57e4tlkcfatj60qo1sepa7hae
+Hibernate: 
+    alter table if exists seat 
+       add constraint UK57e4tlkcfatj60qo1sepa7hae unique (screen_id, row_label, seat_number)
+Hibernate: 
+    alter table if exists show_seat 
+       drop constraint if exists UKj4343e94ap4pbd87nuy85cgn8
+Hibernate: 
+    alter table if exists show_seat 
+       add constraint UKj4343e94ap4pbd87nuy85cgn8 unique (show_id, seat_id)
+Hibernate: 
+    alter table if exists booking 
+       add constraint FKbndqh32aam28dg2fws9mfu565 
+       foreign key (discount_code_id) 
+       references discount_code
+Hibernate: 
+    alter table if exists booking 
+       add constraint FK2lr4fhgeao9p3uyhngtwn67h7 
+       foreign key (show_id) 
+       references show
+Hibernate: 
+    alter table if exists booking 
+       add constraint FKn7phgawjwo673xgim9d2cvfe1 
+       foreign key (user_id) 
+       references app_user
+Hibernate: 
+    alter table if exists payment 
+       add constraint FKqewrl4xrv9eiad6eab3aoja65 
+       foreign key (booking_id) 
+       references booking
+Hibernate: 
+    alter table if exists screen 
+       add constraint FKe30coiblnr7ooxqc3tpi4t7rh 
+       foreign key (theater_id) 
+       references theater
+Hibernate: 
+    alter table if exists seat 
+       add constraint FKa20kk7r8mh61c0khpxmx7uqcp 
+       foreign key (screen_id) 
+       references screen
+Hibernate: 
+    alter table if exists show 
+       add constraint FKrko1v6l96s1pp0gvuit6c7l7q 
+       foreign key (movie_id) 
+       references movie
+Hibernate: 
+    alter table if exists show 
+       add constraint FKpmdhsg2pprfg2634ojdwiv181 
+       foreign key (screen_id) 
+       references screen
+Hibernate: 
+    alter table if exists show_seat 
+       add constraint FKdgpqd0itfv4yviphs7h39gbfx 
+       foreign key (booking_id) 
+       references booking
+Hibernate: 
+    alter table if exists show_seat 
+       add constraint FK6i74j78n2rm115651mji6o8yj 
+       foreign key (seat_id) 
+       references seat
+Hibernate: 
+    alter table if exists show_seat 
+       add constraint FKe3tntcmo1pp6wj0nnltb8mdxs 
+       foreign key (show_id) 
+       references show
+Hibernate: 
+    alter table if exists theater 
+       add constraint FKikchmxlrjeeyokbkoaijxgycm 
+       foreign key (city_id) 
+       references city
+2026-07-27T01:02:21.431+05:30  INFO 29961 --- [movie-booking] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-27T01:02:21.607+05:30  INFO 29961 --- [movie-booking] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-27T01:02:21.908+05:30  WARN 29961 --- [movie-booking] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-27T01:02:21.929+05:30  INFO 29961 --- [movie-booking] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-07-27T01:02:22.253+05:30  INFO 29961 --- [movie-booking] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:moviebooking'
+2026-07-27T01:02:22.306+05:30  INFO 29961 --- [movie-booking] [           main] c.e.m.s.BookingLifecycleIntegrationTest  : Started BookingLifecycleIntegrationTest in 2.445 seconds (process running for 3.757)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.role 
+    from
+        app_user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.status='HELD' 
+        and ss1_0.hold_expires_at<localtimestamp
+Hibernate: 
+    insert 
+    into
+        app_user
+        (email, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, default)
+=================================================================
+Seeded default admin user for local/demo use:
+  email:    admin@moviebooking.local
+  password: ChangeMe123!
+Use these with HTTP Basic auth against /api/admin/** endpoints.
+=================================================================
+Hibernate: 
+    insert 
+    into
+        app_user
+        (email, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        city
+        (name, state, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        theater
+        (address, city_id, name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        screen
+        (name, theater_id, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seat
+        (row_label, screen_id, seat_number, tier, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        movie
+        (duration_minutes, genre, language, title, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        show
+        (base_price, end_time, movie_id, screen_id, start_time, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        show_seat
+        (booking_id, hold_expires_at, seat_id, show_id, status, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=? 
+        and ss1_0.seat_id in (?) for update
+Hibernate: 
+    insert 
+    into
+        booking
+        (created_at, discount_code_id, hold_expires_at, show_id, status, total_amount, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment
+        (amount, booking_id, created_at, provider_reference, refunded_amount, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.booking_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.amount,
+        p1_0.booking_id,
+        p1_0.created_at,
+        p1_0.provider_reference,
+        p1_0.refunded_amount,
+        p1_0.status 
+    from
+        payment p1_0 
+    where
+        p1_0.booking_id=?
+Hibernate: 
+    select
+        rp1_0.id,
+        rp1_0.active,
+        rp1_0.min_hours_before_show,
+        rp1_0.name,
+        rp1_0.refund_percentage 
+    from
+        refund_policy rp1_0 
+    where
+        rp1_0.active 
+    order by
+        rp1_0.min_hours_before_show desc
+Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    update
+        booking 
+    set
+        created_at=?,
+        discount_code_id=?,
+        hold_expires_at=?,
+        show_id=?,
+        status=?,
+        total_amount=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    update
+        payment 
+    set
+        amount=?,
+        booking_id=?,
+        created_at=?,
+        provider_reference=?,
+        refunded_amount=?,
+        status=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.booking_id=?
+[notification] Booking #Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=?
+1 cancelled for user lifecycle@test.com
+]]></system-out>
+  </testcase>
+  <testcase name="happyPath_holdThenConfirm_seatEndsUpBookedAndVisibleInHistory" classname="com.example.moviebooking.service.BookingLifecycleIntegrationTest" time="0.023">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        app_user
+        (email, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        city
+        (name, state, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        theater
+        (address, city_id, name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        screen
+        (name, theater_id, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seat
+        (row_label, screen_id, seat_number, tier, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        movie
+        (duration_minutes, genre, language, title, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        show
+        (base_price, end_time, movie_id, screen_id, start_time, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        show_seat
+        (booking_id, hold_expires_at, seat_id, show_id, status, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=? 
+        and ss1_0.seat_id in (?) for update
+Hibernate: 
+    insert 
+    into
+        booking
+        (created_at, discount_code_id, hold_expires_at, show_id, status, total_amount, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=?
+Hibernate: 
+    insert 
+    into
+        payment
+        (amount, booking_id, created_at, provider_reference, refunded_amount, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.booking_id=?
+Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    update
+        booking 
+    set
+        created_at=?,
+        discount_code_id=?,
+        hold_expires_at=?,
+        show_id=?,
+        status=?,
+        total_amount=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=?
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.created_at,
+        b1_0.discount_code_id,
+        b1_0.hold_expires_at,
+        b1_0.show_id,
+        b1_0.status,
+        b1_0.total_amount,
+        b1_0.user_id 
+    from
+        booking b1_0 
+    where
+        b1_0.user_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="cannotConfirmSameBookingTwice" classname="com.example.moviebooking.service.BookingLifecycleIntegrationTest" time="0.013">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        app_user
+        (email, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        city
+        (name, state, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        theater
+        (address, city_id, name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        screen
+        (name, theater_id, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seat
+        (row_label, screen_id, seat_number, tier, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        movie
+        (duration_minutes, genre, language, title, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        show
+        (base_price, end_time, movie_id, screen_id, start_time, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        show_seat
+        (booking_id, hold_expires_at, seat_id, show_id, status, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=? 
+        and ss1_0.seat_id in (?) for update
+Hibernate: 
+    insert 
+    into
+        booking
+        (created_at, discount_code_id, hold_expires_at, show_id, status, total_amount, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment
+        (amount, booking_id, created_at, provider_reference, refunded_amount, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.booking_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="expiryPath_expiredHold_isSweptBackToAvailable_andCannotBePaidFor" classname="com.example.moviebooking.service.BookingLifecycleIntegrationTest" time="0.017">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        app_user
+        (email, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        city
+        (name, state, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        theater
+        (address, city_id, name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        screen
+        (name, theater_id, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        seat
+        (row_label, screen_id, seat_number, tier, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        movie
+        (duration_minutes, genre, language, title, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        show
+        (base_price, end_time, movie_id, screen_id, start_time, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        show_seat
+        (booking_id, hold_expires_at, seat_id, show_id, status, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=? 
+        and ss1_0.seat_id in (?) for update
+Hibernate: 
+    insert 
+    into
+        booking
+        (created_at, discount_code_id, hold_expires_at, show_id, status, total_amount, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    update
+        booking 
+    set
+        created_at=?,
+        discount_code_id=?,
+        hold_expires_at=?,
+        show_id=?,
+        status=?,
+        total_amount=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=?
+Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.status='HELD' 
+        and ss1_0.hold_expires_at<localtimestamp
+Hibernate: 
+    update
+        show_seat 
+    set
+        booking_id=?,
+        hold_expires_at=?,
+        seat_id=?,
+        show_id=?,
+        status=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+Hibernate: 
+    update
+        booking 
+    set
+        created_at=?,
+        discount_code_id=?,
+        hold_expires_at=?,
+        show_id=?,
+        status=?,
+        total_amount=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=?
+Hibernate: 
+    insert 
+    into
+        app_user
+        (email, name, password_hash, role, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        ss1_0.id,
+        ss1_0.booking_id,
+        ss1_0.hold_expires_at,
+        ss1_0.seat_id,
+        ss1_0.show_id,
+        ss1_0.status,
+        ss1_0.version 
+    from
+        show_seat ss1_0 
+    where
+        ss1_0.show_id=? 
+        and ss1_0.seat_id in (?) for update
+Hibernate: 
+    insert 
+    into
+        booking
+        (created_at, discount_code_id, hold_expires_at, show_id, status, total_amount, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+]]></system-out>
+  </testcase>
+</testsuite>
