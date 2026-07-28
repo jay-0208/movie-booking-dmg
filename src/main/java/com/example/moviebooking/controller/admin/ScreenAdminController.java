@@ -3,6 +3,7 @@ package com.example.moviebooking.controller.admin;
 import com.example.moviebooking.dto.ScreenRequest;
 import com.example.moviebooking.dto.ScreenResponse;
 import com.example.moviebooking.dto.SeatLayoutRequest;
+import com.example.moviebooking.dto.SeatResponse;
 import com.example.moviebooking.entity.Screen;
 import com.example.moviebooking.entity.Seat;
 import com.example.moviebooking.entity.Theater;
@@ -58,8 +59,8 @@ public class ScreenAdminController {
     // layout. If you need to change a layout, delete and recreate the screen,
     // or add a dedicated "replace layout" endpoint if you have time.
     @PostMapping("/{id}/seat-layout")
-    public ResponseEntity<List<Seat>> createSeatLayout(@PathVariable Long id,
-                                                         @Valid @RequestBody SeatLayoutRequest request) {
+    public ResponseEntity<List<SeatResponse>> createSeatLayout(@PathVariable Long id,
+                                                               @Valid @RequestBody SeatLayoutRequest request) {
         Screen screen = findOrThrow(id);
 
         List<Seat> seats = new ArrayList<>();
@@ -74,13 +75,14 @@ public class ScreenAdminController {
             }
         }
         seats = seatRepository.saveAll(seats);
-        return ResponseEntity.status(HttpStatus.CREATED).body(seats);
+        List<SeatResponse> response = seats.stream().map(this::toSeatResponse).toList();
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @GetMapping("/{id}/seats")
-    public List<Seat> listSeats(@PathVariable Long id) {
+    public List<SeatResponse> listSeats(@PathVariable Long id) {
         findOrThrow(id); // 404 if screen doesn't exist, rather than silently returning []
-        return seatRepository.findByScreenId(id);
+        return seatRepository.findByScreenId(id).stream().map(this::toSeatResponse).toList();
     }
 
     private Screen findOrThrow(Long id) {
@@ -90,5 +92,9 @@ public class ScreenAdminController {
 
     private ScreenResponse toResponse(Screen s) {
         return new ScreenResponse(s.getId(), s.getName(), s.getTheater().getId(), s.getTheater().getName());
+    }
+
+    private SeatResponse toSeatResponse(Seat s) {
+        return new SeatResponse(s.getId(), s.getRowLabel(), s.getSeatNumber(), s.getTier());
     }
 }
